@@ -4,7 +4,7 @@ interface TextProps extends HTMLAttributes<HTMLElement> {
 	children: ReactNode
 	as: "span" | "p" | "div"
 	color?: string
-	variant: "text" | "caption"
+	variant?: "text" | "caption"
 	className?: string
 }
 export default function Text({
@@ -12,7 +12,7 @@ export default function Text({
 	className,
 	color,
 	as,
-	variant,
+	variant = "text",
 	...rest
 }: TextProps) {
 	const Tag = as
@@ -20,7 +20,7 @@ export default function Text({
 		<Tag
 			className={`${className ?? ""} ${variant === "caption" ? styles.caption : styles.text}`}
 			{...rest}
-			style={{ color: color }}
+			style={{ color: color, ...rest.style}}
 		>
 			{children}
 		</Tag>

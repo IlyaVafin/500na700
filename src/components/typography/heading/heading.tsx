@@ -3,7 +3,7 @@ import styles from "./heading.module.scss"
 
 interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
 	as: "h1" | "h2" | "h3" | "h4"
-	color: string
+	color?: string
 	children: ReactNode
   className?: string 
 }
@@ -14,7 +14,7 @@ export default function Heading({ as, color, children, className, ...rest }: Hea
 		<Tag
       {...rest}
 			className={`${styles[as]} ${styles.heading} ${className ?? ""}`}
-			style={{ color: color }}
+			style={{ color: color, ...rest.style }}
 		>
 			{children}
 		</Tag>

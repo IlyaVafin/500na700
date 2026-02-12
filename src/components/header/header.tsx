@@ -8,7 +8,7 @@ export default function Header() {
 			<div className={styles.headerFixed}>
 				<Container>
 					<div className={styles.headerContent}>
-						<Image src='/logo.svg' alt='logotype' width={70} height={84} />
+						<Image src='/logo.svg' alt='logotype' sizes="100vw" width={0} height={0} className={styles.logo} />
 						<Button color='white'>Связаться с нами</Button>
 					</div>
 				</Container>
