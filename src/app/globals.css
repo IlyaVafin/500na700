@@ -5,8 +5,9 @@
   --color-black: #0F0F17;
 }
 
-body {
+html, body {
   background: var(--color-black);
   color: var(--foreground);
   font-family: var(--font-inter);
+  min-height: 100vh;
 }
