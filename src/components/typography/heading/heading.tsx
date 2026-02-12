@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react"
-import styles from "./heading.module.css"
+import styles from "./heading.module.scss"
 
 interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
 	as: "h1" | "h2" | "h3" | "h4"
@@ -13,7 +13,7 @@ export default function Heading({ as, color, children, className, ...rest }: Hea
 	return (
 		<Tag
       {...rest}
-			className={`${styles[as]} font-semibold leading-[110%] uppercase ${className ?? ""}`}
+			className={`${styles[as]} ${styles.heading} ${className ?? ""}`}
 			style={{ color: color }}
 		>
 			{children}

@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react"
-
+import styles from "./text.module.scss"
 interface TextProps extends HTMLAttributes<HTMLElement> {
 	children: ReactNode
 	as: "span" | "p" | "div"
@@ -18,7 +18,7 @@ export default function Text({
 	const Tag = as
 	return (
 		<Tag
-			className={`${className ?? ""} ${variant === "caption" ? "uppercase leading-[130%] text-[12px]" : ""}`}
+			className={`${className ?? ""} ${variant === "caption" ? styles.caption : styles.text}`}
 			{...rest}
 			style={{ color: color }}
 		>
