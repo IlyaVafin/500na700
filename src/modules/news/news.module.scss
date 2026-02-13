@@ -12,7 +12,7 @@
 
 .title {
 	margin-left: 10px;
-  text-align: center;
+	text-align: center;
 }
 .cardText {
 	margin-top: 20px;
@@ -76,6 +76,12 @@
 @media (min-width: 1376px) {
 	.title {
 		margin-left: 0;
-    text-align: left;
+		text-align: left;
+	}
+}
+
+@media (min-width: 1080px) {
+	.postTitle {
+		max-width: 496px;
 	}
 }

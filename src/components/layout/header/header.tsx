@@ -1,8 +1,8 @@
 import Image from "next/image"
-import Button from "../button/button"
-import Container from "../container/container"
-import styles from "./header.module.scss"
 import Link from "next/link"
+import Button from "../../button/button"
+import Container from "../../container/container"
+import styles from "./header.module.scss"
 export default function Header() {
 	return (
 		<header className={styles.header}>

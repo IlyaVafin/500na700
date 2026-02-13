@@ -7,6 +7,8 @@
 :root  {
   --color-white: white;
   --color-black: #0F0F17;
+  --background-gradient: linear-gradient(to bottom, #FB8627, #F5BEF6);
+
 }
 
 html, body {

@@ -1,0 +1,30 @@
+.footer {
+  position: relative;
+	background: var(--background-gradient);
+	height: 248px;
+	margin-top: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  height: 431px;
+}
+
+.footer h2 {
+  max-width: 191px;
+}
+
+@media (min-width: 810px) {
+  .footer {
+    flex-direction: row;
+    height: 248px;
+  }
+  .footer h2 {
+    max-width: 100%;
+  }
+  .logo {
+    position: absolute;
+    left: 40px;
+  }
+}
