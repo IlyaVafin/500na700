@@ -1,7 +1,7 @@
+import Container from "@/components/container/container"
 import Heading from "@/components/typography/heading/heading"
 import { getNews } from "./api/getNews"
 import styles from "./news.module.scss"
-import Container from "@/components/container/container"
 import NewsCard from "./ui/news-card"
 export default async function NewsModule() {
 	const news = await getNews()
@@ -14,6 +14,8 @@ export default async function NewsModule() {
 				<div className={styles.newsBlock}>
 					{news.map(post => (
 						<NewsCard
+							variant="muplitple"
+							id={post.id}
 							date={post.date}
 							description={post.description}
 							image={post.image}
