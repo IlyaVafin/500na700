@@ -24,7 +24,7 @@ export default function Modal({
 		handleChangePhoneNumber,
 		sendFeedback,
 	} = useFormModal()
-  
+	const hasErrors = Object.values(formErrors).some(v => v.length > 0)
 	if (!isClient) return
 	return (
 		<>
@@ -33,7 +33,10 @@ export default function Modal({
 					onClick={() => setShow(false)}
 					className={`${styles.overlay} ${show ? styles.active : ""}`}
 				></div>
-				<div className={`${styles.modal} ${show ? styles.active : ""}`}>
+				<div
+					style={{ minHeight: hasErrors ? "500px" : "" }}
+					className={`${styles.modal} ${show ? styles.active : ""}`}
+				>
 					<div className={styles.modalHeader}>
 						<Heading as='h2'>Связаться с нами</Heading>
 						<button onClick={() => setShow(false)}>
@@ -58,7 +61,11 @@ export default function Modal({
 									placeholder='Имя'
 									value={formData.name}
 								/>
-								{formErrors.name && <p>{formErrors.name}</p>}
+								{formErrors.name && (
+									<Text as='p' color='#650000'>
+										{formErrors.name}
+									</Text>
+								)}
 							</div>
 							<div className=''>
 								<Input
@@ -69,7 +76,11 @@ export default function Modal({
 									placeholder='Телефон'
 									value={formData.phone}
 								/>
-								{formErrors.phone && <p>{formErrors.phone}</p>}
+								{formErrors.phone && (
+									<Text as='p' color='#650000'>
+										{formErrors.phone}
+									</Text>
+								)}
 							</div>
 							<div className=''>
 								<Input
@@ -80,7 +91,11 @@ export default function Modal({
 									placeholder='E-mail'
 									value={formData.email}
 								/>
-								{formErrors.email && <p>{formErrors.email}</p>}
+								{formErrors.email && (
+									<Text as='p' color='#650000'>
+										{formErrors.email}
+									</Text>
+								)}
 							</div>
 							<div style={{ marginTop: "6px" }} className=''>
 								<Input
@@ -94,7 +109,11 @@ export default function Modal({
 										</Text>
 									}
 								/>
-                {formErrors.checked && <p>{formErrors.checked}</p>}
+								{formErrors.checked && (
+									<Text as='p' color='#650000'>
+										{formErrors.checked}
+									</Text>
+								)}
 							</div>
 						</div>
 						<Button
