@@ -1,6 +1,6 @@
+import ToggleModal from "@/modules/toggle-modal/toggle-modal"
 import Image from "next/image"
 import Link from "next/link"
-import Button from "../../button/button"
 import Container from "../../container/container"
 import styles from "./header.module.scss"
 export default function Header() {
@@ -20,7 +20,7 @@ export default function Header() {
 								className={styles.logo}
 							/>
 						</Link>
-						<Button color='white'>Связаться с нами</Button>
+						<ToggleModal/>
 					</div>
 				</Container>
 			</div>

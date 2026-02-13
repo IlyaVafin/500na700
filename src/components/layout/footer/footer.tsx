@@ -1,4 +1,4 @@
-import Heading from "@/components/typography/heading/heading"
+import Heading from "@/components/ui/typography/heading/heading"
 import styles from "./footer.module.scss"
 export default function Footer() {
 	return (

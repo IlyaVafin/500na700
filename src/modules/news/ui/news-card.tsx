@@ -1,9 +1,9 @@
-import Heading from "@/components/typography/heading/heading"
-import Text from "@/components/typography/text/text"
+import Heading from "@/components/ui/typography/heading/heading"
+import Text from "@/components/ui/typography/text/text"
 import Image from "next/image"
+import Link from "next/link"
 import styles from "../news.module.scss"
 import { News } from "../types"
-import Link from "next/link"
 export default function NewsCard({
 	id,
 	image,

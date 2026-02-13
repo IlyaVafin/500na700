@@ -1,5 +1,5 @@
 import Container from "@/components/container/container"
-import Heading from "@/components/typography/heading/heading"
+import Heading from "@/components/ui/typography/heading/heading"
 import { getNews } from "@/modules/news/api/getNews"
 import { getNewsById } from "@/modules/news/api/getNewsById"
 import NewsCard from "@/modules/news/ui/news-card"
