@@ -1,4 +1,5 @@
 import Container from "@/components/container/container"
+import Heading from "@/components/typography/heading/heading"
 import { getNews } from "@/modules/news/api/getNews"
 import { getNewsById } from "@/modules/news/api/getNewsById"
 import NewsCard from "@/modules/news/ui/news-card"
@@ -18,19 +19,24 @@ export default async function NewsPage({
 }) {
 	const { id } = await params
 	const post = await getNewsById(Number(id))
-	if (post.status === "error") return post.data
+	if (post.status === "error")
+		return (
+			<Heading as='h1' style={{ textAlign: "center", marginTop: "40px" }} color='white'>
+				{post.data}
+			</Heading>
+		)
 	const { data } = post
 	return (
 		<Container>
-				<NewsCard
-					date={data.date}
-					variant='single'
-					description={data.description}
-					id={data.id}
-					image={data.image}
-					title={data.title}
-					subtitle={data.subtitle}
-				/>
+			<NewsCard
+				date={data.date}
+				variant='single'
+				description={data.description}
+				id={data.id}
+				image={data.image}
+				title={data.title}
+				subtitle={data.subtitle}
+			/>
 		</Container>
 	)
 }

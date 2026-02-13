@@ -9,7 +9,7 @@ export const getNewsById = (
 		const post = news.find(p => p.id === id)
 		setTimeout(() => {
 			if (!post) {
-				reject("Новость не найдена")
+				reject("Новость не найдена x_x")
 				return
 			}
 			resolve(post)
