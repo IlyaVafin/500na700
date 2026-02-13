@@ -64,20 +64,24 @@ export default function NewsCard({
 								{date}
 							</Text>
 						</div>
-						<Heading className={styles.subtitle} color='white' as='h3'>
-							{subtitle}
-						</Heading>
-						{!Array.isArray(description) ? (
-							<Text color="white" as='p'>{description}</Text>
-						) : (
-							<>
-								{description.map((paragraph, i) => (
-									<Text color='white' key={i} as='p'>
-										{paragraph} <br /> <br />
-									</Text>
-								))}
-							</>
-						)}
+						<div className={styles.mainText}>
+							<Heading className={styles.subtitle} color='white' as='h3'>
+								{subtitle}
+							</Heading>
+							{!Array.isArray(description) ? (
+								<Text color='white' as='p'>
+									{description}
+								</Text>
+							) : (
+								<>
+									{description.map((paragraph, i) => (
+										<Text color='white' key={i} as='p'>
+											{paragraph} <br /> <br />
+										</Text>
+									))}
+								</>
+							)}
+						</div>
 					</div>
 				</article>
 			)}

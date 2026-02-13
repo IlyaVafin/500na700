@@ -29,6 +29,7 @@
 	max-height: 320px;
 }
 
+
 .singlePost {
 	display: flex;
 	flex-direction: column;
@@ -44,6 +45,7 @@
 .postText {
 	padding: 0 10px;
 }
+
 
 .subtitle {
 	margin-bottom: 10px;
@@ -65,9 +67,9 @@
 		flex-direction: row;
 		margin-top: 78px;
 	}
-	.postText {
-		max-width: 439px;
-	}
+	.mainText {
+	max-width: 439px;
+}
 	.date {
 		margin-top: 20px;
 	}
@@ -77,11 +79,5 @@
 	.title {
 		margin-left: 0;
 		text-align: left;
-	}
-}
-
-@media (min-width: 1080px) {
-	.postTitle {
-		max-width: 496px;
 	}
 }
