@@ -3,8 +3,10 @@ import { ReactNode } from "react";
 
 export default function PostLayout({children}: {children: ReactNode}) {
   return (
-    <section>
-      {children}
+    <section style={{minHeight: "100vh", display: "flex", flexDirection: "column"}}>
+      <div style={{flex: "1"}}>
+        {children}
+      </div>
       <Footer/>
     </section>
   )
