@@ -52,11 +52,13 @@ export const useFormModal = () => {
 			if(!formData.checked) setFormErrors(prev => ({...prev, checked: "Согласитесь с условиями"}))
 		}
 	}
+	const hasErrors = Object.values(formErrors).some(v => v.length > 0)
 	return {
 		handleFieldChange,
 		formData,
 		handleChangePhoneNumber,
 		sendFeedback,
+		hasErrors,
 		formErrors
 	}
 }

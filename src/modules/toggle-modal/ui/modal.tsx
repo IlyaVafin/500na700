@@ -23,8 +23,9 @@ export default function Modal({
 		handleFieldChange,
 		handleChangePhoneNumber,
 		sendFeedback,
+    hasErrors
 	} = useFormModal()
-	const hasErrors = Object.values(formErrors).some(v => v.length > 0)
+	
 	if (!isClient) return
 	return (
 		<>
