@@ -42,6 +42,8 @@ export const useFormModal = () => {
 		) {
 			alert("Обратная связь отправлена")
 			console.log(formData)
+			setFormData({ checked: false, email: "", name: "", phone: "" })
+			setFormErrors({ checked: "", email: "", name: "", phone: "" })
 		} else {
 			if (!validateEmail(formData.email))
 				setFormErrors(prev => ({ ...prev, email: "Неккоректный email" }))
@@ -49,7 +51,8 @@ export const useFormModal = () => {
 				setFormErrors(prev => ({ ...prev, name: "Неккоректное имя" }))
 			if (!validatePhone(formData.phone))
 				setFormErrors(prev => ({ ...prev, phone: "Неккоректный телефон" }))
-			if(!formData.checked) setFormErrors(prev => ({...prev, checked: "Согласитесь с условиями"}))
+			if (!formData.checked)
+				setFormErrors(prev => ({ ...prev, checked: "Согласитесь с условиями" }))
 		}
 	}
 	const hasErrors = Object.values(formErrors).some(v => v.length > 0)
@@ -59,6 +62,6 @@ export const useFormModal = () => {
 		handleChangePhoneNumber,
 		sendFeedback,
 		hasErrors,
-		formErrors
+		formErrors,
 	}
 }
