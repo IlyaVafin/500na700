@@ -2,7 +2,7 @@
   position: relative;
 	background: var(--background-gradient);
 	height: 248px;
-	margin-top: 150px;
+	margin-top: 80px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -19,6 +19,7 @@
   .footer {
     flex-direction: row;
     height: 248px;
+    margin-top: 150px;
   }
   .footer h2 {
     max-width: 100%;
